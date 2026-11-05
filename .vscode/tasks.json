@@ -1,0 +1,27 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "MU/TH/R: iniciar servidor local (Vite)",
+      "type": "shell",
+      "command": "npm run dev -- --host 127.0.0.1 --open",
+      "isBackground": true,
+      "problemMatcher": {
+        "base": "$tsc-watch",
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "^\\s*> mu-th-r-6000@.* dev",
+          "endsPattern": "Local:\\s+http://127\\.0\\.0\\.1:[0-9]+/"
+        }
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": false
+      },
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    }
+  ]
+}

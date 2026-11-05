@@ -1,0 +1,60 @@
+.identity-recovery-popup {
+  position: fixed;
+  z-index: 1000;
+  width: min(340px, calc(100vw - 24px));
+  box-sizing: border-box;
+  padding: 14px;
+  border: 1px solid var(--accent);
+  color: var(--text);
+  background: #0d1421;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, .55);
+}
+
+.identity-recovery-popup-handle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: -14px -14px 12px;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--line-strong);
+  color: var(--accent);
+  background: rgba(197, 166, 75, .08);
+  font: 9px var(--mono);
+  letter-spacing: .08em;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+}
+
+.identity-recovery-popup-handle:active { cursor: grabbing; }
+.identity-recovery-popup-handle:focus-visible { outline: 2px solid var(--accent); outline-offset: -3px; }
+.identity-recovery-popup-handle span:last-child { font-size: 15px; }
+
+.identity-recovery-popup > p {
+  margin: 0;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+}
+
+.identity-recovery-popup > p strong { color: #fff; font-weight: 700; }
+
+.identity-recovery-popup-actions {
+  display: flex;
+  gap: 9px;
+  margin-top: 15px;
+}
+
+.identity-recovery-popup-actions button {
+  flex: 1;
+  min-height: 42px;
+}
+
+.identity-recovery-popup-actions .danger-button { color: #e8c2b9; }
+
+@media (max-width: 480px) {
+  .identity-recovery-popup { padding: 12px; }
+  .identity-recovery-popup-handle { margin: -12px -12px 10px; padding: 11px 12px; }
+}
